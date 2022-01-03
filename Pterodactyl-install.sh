@@ -1,14 +1,6 @@
 #!/bin/bash
-# Pterodactyl dockeer &  Database install
+# Pterodactyl docker &  Database install
 
-# Download Files
-function gitdownload(){
-    sudo git clone --quiet https://github.com/demondamz/PG-Pterodactyl-docker.git /opt/pterodactyl
-    cd /opt/pterodactyl
-}
-
-gitdownload
-echo "files downloaded needed for install"
 tee <<-EOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⛔️  What would you like to do?.
