@@ -12,6 +12,11 @@ echo "files downloaded needed for install"
 tee <<-EOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⛔️  What would you like to do?.
+        1. To install the panel you need to have a database installed with the following information 
+            Use the Database Manager to create the database & User.
+                Database Name : pterodactyl
+                Database User : pterodactyl
+                Database Pass : pterodactyl
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EOF
 echo "You have the following options"
@@ -19,11 +24,7 @@ echo "panel is the main program"
 echo "Node for each server"
 echo "Database for the panell"
 echo "DB Manager to Manage MySql"
-tee <<-EOF
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⛔️  Cannot install the panel without a Database.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-EOF
+
 PS3='Please enter your choice: '
 options=("panel" "Node" "Database" "DB-Manager" "Quit")
 select opt in "${options[@]}"
