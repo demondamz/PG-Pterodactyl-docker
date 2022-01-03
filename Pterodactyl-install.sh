@@ -1,9 +1,9 @@
 #!/bin/bash
-#Pterodactyl dockeer &  Database install
+# Pterodactyl dockeer &  Database install
 
 # Download Files
 function gitdownload(){
-    sudo git clone --quiet https://github.com/demondamz/PG-Pterodactyl.git /opt/pterodactyl
+    sudo git clone --quiet https://github.com/demondamz/PG-Pterodactyl-docker.git /opt/pterodactyl
     cd /opt/pterodactyl
 }
 # Install Panel
@@ -25,8 +25,7 @@ function dbmanagement(){
     sudo ansible-playbook ./pterodactyl-docker-adminer.yml
 }
 
-# Execute Install Options
-gitdownload
+function maininstall(){
 echo "files downloaded needed for install"
 tee <<-EOF
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -100,3 +99,8 @@ done
 ⛔️  Install Complete..
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EOF
+}
+
+# Commands 
+gitdownload
+maininstall
